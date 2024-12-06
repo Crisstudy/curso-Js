@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV.ORG</title>
+</head>
+<body>
+    <h1>Sua origem</h1>
+    País onde nasceu <input type="text" name="nat" id="nat">
+    <input type="button" value="verificar" onclick="calcular()">
+<div id="res"></div>
+
+    <script>
+        function calcular() {
+            var nat = window.document.querySelector('input#nat').value
+            var res = window.document.querySelector('div#res')
+
+            res.innerHTML = (`<p>Seu país de origem é <strong>${nat}</strong></p>`)
+            if (nat !== 'Brasil')  {
+                res.innerHTML += ' Você é estrangeiro!'
+            } else {
+                res.innerHTML += ' Você é brasileiro!'
+            }
+        }            
+    </script>
+</body>
+</html>
